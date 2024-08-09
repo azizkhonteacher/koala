@@ -1,0 +1,107 @@
+.shop_products {
+  background: #f4f1ed;
+  .container {
+    border-radius: 60px 60px 0px 0px;
+    background: #ffffff;
+    box-shadow: 0px -8px 11px 0px #00000008;
+    @extend %df;
+    gap: 57px;
+    padding-bottom: 105px;
+  }
+  &-info {
+    @extend %df;
+    @extend %fcc;
+  }
+  &-title {
+    width: 100%;
+    h2 {
+      color: $title;
+      @extend %s-b-s-t;
+    }
+  }
+  &-desc {
+    p {
+      color: $desc;
+      @include font(400, 16px, 1.5);
+      text-align: center;
+      margin: 27px 0 42px;
+    }
+  }
+  &-btn {
+    background: $btn-bg;
+    @extend %btns;
+  }
+  &-wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 267px));
+    gap: 30px;
+  }
+  &-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    &-img {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 226px;
+      background: $img-bg;
+      img {
+        @extend %img;
+      }
+      span {
+        color: $title;
+        @include font(400, 10);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 9px;
+        left: 10px;
+      }
+    }
+    &-title {
+      width: 100%;
+      h2 {
+        margin-top: 13px;
+        color: $title;
+        @include t-font(400, 35px, 1.1);
+      }
+    }
+    &-similar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 15px 0 17px;
+    }
+    &-similar-link {
+      display: flex;
+      color: $title;
+      @include font(400, 12px, 1.2);
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      background: $img-bg;
+      border-radius: 20px;
+    }
+    &-desc{
+      width: 100%;
+      padding-right: 22px;
+      p{
+        color: $desc;
+        @include font(400, 16px, 1.5);
+        text-align: justify;
+      }
+    }
+    &-pr-text{
+      p{
+        margin-top: 8px;
+        color: $title;
+        @include font(400, 14px, 1.5);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.services-active-item {
+  .services-item-count {
+    color: #fff;
+    background: $title;
+    &::after {
+      background: #fff;
+    }
+  }
+}
+.t0{
+  top: 0;
+  left: 0;
+}
+.t1{
+  top: 0;
+  right: 0;
+}
+.b0{
+  bottom: 0;
+  left: 0;
+}
+.b1{
+  bottom: 0;
+  right: 0;
+}

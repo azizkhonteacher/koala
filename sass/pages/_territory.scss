@@ -1,0 +1,44 @@
+.territory {
+  padding: 147px 0 150px;
+  background: #636e72;
+  .container {
+    @extend %df;
+    @extend %fcc;
+    gap: 40px;
+  }
+  &-info {
+    @extend %df;
+    @extend %fcc;
+    text-align: center;
+  }
+  &-title{
+    max-width: 312px;
+    h2{
+        width: 100%;
+        color: #fff;
+        @include t-font(400, 46px, 1.2);
+        letter-spacing: 1px;
+    }
+  }
+  &-desc{
+    max-width: 495px;
+    @extend %df;
+    @extend %fcc;
+    padding: 29px 0 26px;
+    p{
+        width: 100%;
+        color: #fff;
+        @include font(400, 16px, 1.5);
+    }
+  }
+  &-btn{
+    @extend %btn;
+  }
+  &-map{
+    width: 768px;
+    height: 484px;
+    img{
+        @extend %img;
+    }
+  }
+}

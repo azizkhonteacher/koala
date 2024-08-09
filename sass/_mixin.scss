@@ -1,0 +1,73 @@
+@mixin font($fw, $fz, $lh: 1) {
+  font-family: $site-font;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+@mixin t-font($fw, $fz, $lh: 1) {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+%fcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%fcs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+%img-c {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+%df {
+  display: flex;
+  flex-direction: column;
+}
+%s-b-s-t {
+  @extend %fcc;
+  @include t-font(400, 48, 1.2);
+  letter-spacing: 1px;
+  text-align: center;
+}
+%btns {
+  @extend %fcc;
+  padding: 8px 40px;
+  border: none;
+  gap: 4px;
+  border-radius: 20px;
+  p {
+    color: $title;
+    @include font(400, 16px, 1.5);
+  }
+  svg {
+    width: 12px;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(2px);
+  }
+}
+%btn {
+  @extend %fcc;
+  padding: 14px 40px 16px;
+  background: $btn-bg;
+  border: none;
+  border-radius: 30px;
+  color: $title;
+  @include font(400, 16px, 1.5);
+}
+%category{
+  color: $title;
+  @include font(400, 16px, 2);
+}
